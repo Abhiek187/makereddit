@@ -40,7 +40,7 @@ app.use(function(err, req, res, next) {
 
 // Database setup
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb://ms-user:makeschool@ds233228.mlab.com:33228/makereddit1';
+const mongoURI = 'mongodb+srv://ms-user:makeschool@cluster0-n7ctu.mongodb.net/test?retryWrites=true&w=majority';
 
 mongoose.connect(mongoURI)
 mongoose.Promise = global.Promise;
