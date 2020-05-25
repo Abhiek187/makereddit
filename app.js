@@ -48,7 +48,7 @@ app.use(function(err, req, res, next) {
 const mongoose = require('mongoose');
 const mongoURI = 'mongodb+srv://ms-user:makeschool@cluster0-n7ctu.mongodb.net/test?retryWrites=true&w=majority';
 
-mongoose.connect(mongoURI)
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
 mongoose.Promise = global.Promise;
 let db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
